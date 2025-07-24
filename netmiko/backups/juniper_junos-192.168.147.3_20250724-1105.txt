@@ -1,0 +1,78 @@
+
+========================================
+Command: show configuration | no-more
+========================================
+## Last commit: 2025-07-24 04:03:36 UTC by root
+version 12.1R1.9;
+system {
+    root-authentication {
+        encrypted-password "$1$0f68Ipxd$DEVf5Br6D5kh.Pq.xUEeu1"; ## SECRET-DATA
+    }
+    login {
+        user juniper {
+            uid 354;
+            class super-user;
+            authentication {
+                encrypted-password "$1$MKtbVrfW$PSK3nm8SwZqvce6Sq94av0"; ## SECRET-DATA
+            }
+        }
+    }
+    services {
+        ssh;
+    }
+    syslog {
+        user * {
+            any emergency;
+        }
+        file messages {
+            any notice;
+            authorization info;
+        }
+        file interactive-commands {
+            interactive-commands any;
+        }
+    }
+}
+interfaces {
+    em0 {
+        unit 0 {
+            family inet {
+                address 192.168.147.3/24;
+            }
+        }
+    }
+}
+
+
+
+========================================
+Command: show version
+========================================
+Model: olive
+JUNOS Base OS boot [12.1R1.9]
+JUNOS Base OS Software Suite [12.1R1.9]
+JUNOS Kernel Software Suite [12.1R1.9]
+JUNOS Crypto Software Suite [12.1R1.9]
+JUNOS Packet Forwarding Engine Support (M/T Common) [12.1R1.9]
+JUNOS Packet Forwarding Engine Support (M20/M40) [12.1R1.9]
+JUNOS Online Documentation [12.1R1.9]
+JUNOS Voice Services Container package [12.1R1.9]
+JUNOS Border Gateway Function package [12.1R1.9]
+JUNOS Services AACL Container package [12.1R1.9]
+JUNOS Services LL-PDF Container package [12.1R1.9]
+JUNOS Services PTSP Container package [12.1R1.9]
+JUNOS Services Stateful Firewall [12.1R1.9]
+JUNOS Services NAT [12.1R1.9]
+JUNOS Services Application Level Gateways [12.1R1.9]
+JUNOS Services Captive Portal and Content Delivery Container package [12.1R1.9]
+JUNOS Services RPM [12.1R1.9]
+JUNOS Services HTTP Content Management package [12.1R1.9]
+JUNOS AppId Services [12.1R1.9]
+JUNOS IDP Services [12.1R1.9]
+JUNOS Services Crypto [12.1R1.9]
+JUNOS Services SSL [12.1R1.9]
+JUNOS Services IPSec [12.1R1.9]
+JUNOS Runtime Software Suite [12.1R1.9]
+JUNOS Routing Software Suite [12.1R1.9]
+
+
